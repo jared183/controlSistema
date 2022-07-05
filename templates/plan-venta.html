@@ -1,0 +1,66 @@
+{% extends 'estructura.html' %} {% block header %}
+
+<div class="container center">
+    <div class="row justify-content-center">
+    <div class="col-lg-7">
+        <div class="shadow-lg border-0 rounded-lg mt-5">
+        <div class="card-header">
+            <h3 class="text-center font-weight-light my-2">Plan Venta</h3>
+        </div>
+        <div class="card-body">
+            <form class="row g-3">
+
+                <div class="col-md-6">
+                    <label for="inputNumber" class="form-label">Cuenta</label>
+                    <input type="" class="form-control" id="number" placeholder="Cuenta">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputNumber" class="form-label">Cuota Mensual</label>
+                    <input type="" class="form-control" id="number" placeholder="Cuota">
+                </div>
+                <div class="col-12">
+                    <label for="inputName" class="form-label">Nombre del Cliente</label>
+                    <input type="text" class="form-control" id="name" placeholder="Cliente">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Domicilio</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Domicilio">
+                </div>
+                <div class="col-md-6">
+                    <label for="Date" class="form-label">Fecha</label>
+                    <input type="Date" class="form-control" id="Date">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPerson" class="form-label">Es una persona</label>
+                    <select id="inputPerson" class="form-select">
+                    <option selected>Fisica</option>
+                    <option>Moral</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputState" class="form-label">Ciudad</label>
+                    <input type="state" class="form-control" id="State" placeholder="Ciudad">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputMoney" class="form-label">Precio</label>
+                    <input type="money" class="form-control" id="Precio" placeholder="Costo total">
+                </div>
+                
+                <div class="col-md-12">
+                    <label for="inputEquipos" class="form-label">Equipos</label>
+                    <input type="text" class="form-control" id="Equipos" placeholder="Equipos que se llevaran">
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Siguiente</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+{% endblock %}
