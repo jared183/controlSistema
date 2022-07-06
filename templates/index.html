@@ -1,0 +1,124 @@
+{% extends 'estructura.html' %} 
+{% block header %}
+
+<header id="sidebarToggle">
+  <div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <div class="sb-sidenav-menu-heading">Contrato</div>
+
+            <!-- Generar Contrato -->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsFor" aria-expanded="false" aria-controls="collapseLayoutsFor">
+              <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Generar Contrato
+              <div class="sb-sidenav-collapse-arrow">
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </a>
+
+            <div class="collapse" id="collapseLayoutsFor" aria-labelledby="headingFor" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="{{ url_for('planRenta') }}">Plan renta</a>
+              </nav>
+            </div>
+
+            <div class="collapse" id="collapseLayoutsFor" aria-labelledby="headingFor" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="{{ url_for('planVenta') }}">Plan Venta</a>
+              </nav>
+            </div>
+
+            <!-- Contrato Generales -->
+            <div class="sb-sidenav-menu-heading">Historial</div>
+
+            <a class="nav-link" href="{{ url_for('contratoGeneral') }}">
+              <div class="sb-nav-link-icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              Contratos Generales
+            </a>
+
+            <!-- Contratos Pendientes -->
+
+            <div class="sb-sidenav-menu-heading">En proceso</div>
+
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsOne" aria-expanded="false" aria-controls="collapseLayoutsOne">
+              <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Contratos Pendientes
+              <div class="sb-sidenav-collapse-arrow">
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </a>
+
+            <div class="collapse" id="collapseLayoutsOne" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="#"> Plan renta</a>
+              </nav>
+            </div>
+
+            <div class="collapse" id="collapseLayoutsOne" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="#"> Plan Venta</a>
+              </nav>
+            </div>
+
+            <!-- Contratos Finalizados -->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePagesTwo" aria-expanded="false" aria-controls="collapsePagesTwo">
+              <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Contratos Finalizados
+              <div class="sb-sidenav-collapse-arrow">
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </a>
+
+            <div class="collapse" id="collapsePagesTwo" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion" >
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="#"> Plan renta</a>
+              </nav>
+            </div>
+
+            <div class="collapse" id="collapsePagesTwo" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="#"> Plan Venta</a>
+              </nav>
+            </div>
+
+            <!-- Contratos Cancelados -->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePagesThree" aria-expanded="false" aria-controls="collapsePagesThree">
+              <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+              Contratos Cancelados
+              <div class="sb-sidenav-collapse-arrow">
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </a>
+
+            <div class="collapse" id="collapsePagesThree" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="#"> Plan renta</a>
+              </nav>
+            </div>
+
+            <div class="collapse" id="collapsePagesThree" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="#"> Plan Venta</a>
+              </nav>
+            </div>
+
+            <div class="sb-sidenav-menu-heading">Facturacion</div>
+            <!-- Recibos -->
+            <a class="nav-link" href="#">
+              <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+              Recibo
+            </a>
+          </div>
+        </div>
+        <div class="sb-sidenav-footer">
+          <div class="small">Proyecto desarrollado por: Seguridad Activa </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+{% endblock %}
