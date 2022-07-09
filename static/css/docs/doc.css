@@ -1,3 +1,52 @@
+.logo{
+  margin-top: -60px;
+  width: 150px;
+  position: absolute;
+}
+
+/* Documento Renta */
+.img-1 {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 305px;
+  height: 90px;
+}
+
+.foot-1 {
+  position: absolute;
+  /* margin-top: 10px; */
+  margin-left: -50px;
+  height: 90px;
+}
+
+.img-2 {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -85px;
+  height: 90px;
+}
+
+.foot-2 {
+  position: absolute;
+  /* margin-top: 10px; */
+  margin-left: -50px;
+  height: 90px;
+}
+
+.img-3 {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -50px;
+  height: 90px;
+}
+
+.foot-3 {
+  position: absolute;
+  /* margin-top: 10px; */
+  margin-left: -50px;
+  height: 90px;
+}
+
 .cuerpo{
   background-color: #f8f9fa;
   font-family: 'Open Sans', sans-serif;
@@ -5,15 +54,18 @@
 
 #visor{
   background-color: rgb(255, 255, 255);
+  margin-top: -30px;
     width: 720px;
     height: 960px;
-    margin: 0 auto;
+    margin: auto;
     box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    padding: 96px;
+    padding: 96px;    
+    /* background-image: url("/static/assets/img/doc.jpg"); */
+    background-repeat: no-repeat; 
 }
 
 #visor p{
-  font-size: 14px;
+  font-size: 13px;
   text-align: justify;
 }
 
@@ -40,4 +92,14 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .plan{
   text-align: right;
+}
+
+
+pre{
+  font-size:14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+  font-size: 11px;
 }
