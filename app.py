@@ -1,7 +1,15 @@
 from distutils import debug
 from re import template
-from flask import Flask, render_template, url_for
+from flask import Flask
+from flask import render_template 
+from flask import request
+from flask import render_template
+from flask import url_for
+from flask import json, jsonify
+from flask import redirect
 
+from Models.renta import Renta
+from Models.venta import Venta
 import  pyrebase
 #CADENA DE CONEXION
 config = {
@@ -37,19 +45,69 @@ def inicio():
 
 
 
+#*=======================================================================================
+#*=======================================================================================
 # ______________ Generar Contrato plan venta______________
-
 @app.route("/venta")
 def planVenta():
-    return render_template('plan-venta.html')
+    # db.child("plan_Venta").push({})
+    lista_registros_venta = db.child("plan_Venta").get().val()
+    try:
+        lista_indice_venta = lista_registros_venta.keys()
+        lista_indice_final_venta = list(lista_indice_venta )
+        return render_template('plan-venta.html',elemento_registros_venta =  lista_registros_venta.values(),  )
+    except:
+        return render_template('plan-venta.html')
 
+@app.route('/save_data_venta', methods=['POST'])
+def save_data_venta():
+    cuenta = request.form.get('cuenta')
+    cuotamensual = request.form.get('cuotamensual')
+    nombrecliente = request.form.get('nombrecliente')
+    domicilio  = request.form.get('domicilio ')
+    fecha = request.form.get('fecha')
+    persona = request.form.get('persona')
+    ciudad = request.form.get('ciudad')
+    precio = request.form.get('precio')
+    equipos = request.form.get('equipos')
+    nueva_venta = Venta(cuenta, cuotamensual, nombrecliente, domicilio, fecha, persona, ciudad, precio, equipos)
+    enviar_respuesta_venta = json.dumps(nueva_venta.__dict__)
+    crear_formato_venta = json.loads(enviar_respuesta_venta)
+    db.child("plan_Venta").push(crear_formato_venta)
+    return redirect(url_for('inicio'))
+#*=======================================================================================
+#*=======================================================================================
 # ______________ Generar Contrato plan renta ______________
-
-
 @app.route("/renta")
 def planRenta():
-    return render_template('plan-renta.html')
+    # db.child("plan_Renta").push({"asfsfaf":"asfasfaf"})
+    lista_registros_renta = db.child("plan_Renta").get().val()
+    try:
+        lista_indice_renta = lista_registros_renta.keys()
+        lista_indice_final_renta = list(lista_indice_renta )
+        return render_template('doc-renta.html',elemento_registros_renta =  lista_registros_renta.values(),  )
+    except:
+        return render_template('plan-renta.html')
 
+@app.route('/save_data_renta', methods=['POST'])
+def save_data_renta():
+    cuenta = request.form.get('cuenta')
+    cuotamensual = request.form.get('cuotamensual')
+    nombrecliente = request.form.get('nombrecliente')
+    domicilio = request.form.get('domicilio')
+    fecha = request.form.get('fecha')
+    persona = request.form.get('persona')
+    ciudad = request.form.get('ciudad')
+    precio = request.form.get('precio')
+    equipos = request.form.get('equipos')
+    nueva_renta = Renta(cuenta, cuotamensual, nombrecliente, domicilio, fecha, persona, ciudad, precio, equipos)
+    enviar_respuesta_renta = json.dumps(nueva_renta.__dict__)
+    crear_formato_renta = json.loads(enviar_respuesta_renta)
+    db.child("plan_Renta").push(crear_formato_renta)
+    return redirect(url_for('inicio'))
+
+#*=======================================================================================
+#*=======================================================================================
 @app.route("/doc-renta")
 def docRenta():
     return render_template('doc-renta.html')
