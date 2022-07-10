@@ -12,6 +12,13 @@
   </head>
   <body>
 
+    <div class="botones">
+      <input type="button" value="Finalizar" onClick=location.href="{{url_for('finalizado')}}" class="btn1">
+      <input type="button" value="Pendiente" onClick=location.href="{{url_for('pendientes')}}" class="btn2">
+      <input type="button" value="Cancelar" onClick=location.href="{{url_for('cancelados')}}" class="btn3">
+      <input type='button' value='Imprimir' onClick='window.print()'; class='noimp'>
+    </div>
+
     <div class="cuerpo">
         <img class="img-1" src="/static/assets/img/head.jpeg" >
 

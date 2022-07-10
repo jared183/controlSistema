@@ -102,3 +102,12 @@ pre {
 span {
   font-size: 12px;
 }
+
+/* Botones */
+.botones {
+  position: absolute;
+}
+
+.noimp{
+  display: none;
+}

@@ -104,3 +104,64 @@ pre{
 span{
   font-size: 11px;
 }
+
+/* Imorimir */
+.noimp {
+  position: absolute;
+  background-color: #555555;;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 41px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Botones */
+.botones{
+  position: absolute;
+}
+
+.btn1{
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn2{
+  background-color: #008CBA;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn3{
+  background-color: #f44336;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 14px 39px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 1px;
+  cursor: pointer;
+}
